@@ -16,14 +16,15 @@ sReg.fit(x_train,y_train)
 
 y_pred=sReg.predict(x_test)
 
-plt.title('plotted data')
 plt.subplot(1,2,1)
 plt.scatter(x_train,y_train,color='blue')
 plt.plot(x_train,sReg.predict(x_train),'r')
+plt.title('plotted traing data')
 
 plt.subplot(1,2,2)
 plt.scatter(x_test,y_test,color='green')
 plt.plot(x_train,sReg.predict(x_train),'b')
+plt.title('plotted testing data')
 
 val=input("enter the year of experience:")
 val=val.split(',')
@@ -37,4 +38,4 @@ sal=sal.astype(int)
 sal=sal.tolist()
 z=sal[0]
 sal=z[0]
-print("your salary is ",sal)
+print("your salary is ",int(sal))
