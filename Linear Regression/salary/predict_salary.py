@@ -33,4 +33,8 @@ for i in val:
     l.append(float(i))
 t = np.array(l).reshape(len(l),1)
 sal=sReg.predict(t)
+sal=sal.astype(int)
+sal=sal.tolist()
+z=sal[0]
+sal=z[0]
 print("your salary is ",sal)
